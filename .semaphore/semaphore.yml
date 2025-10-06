@@ -23,6 +23,7 @@ blocks:
           commands:
             - artifact pull workflow app
             - chmod +x app
+            - '# test'
             - ./app
         - name: Lint
           commands:
