@@ -12,7 +12,7 @@ blocks:
           commands:
             - checkout
             - make app
-  - name: Tests
+  - name: Tests1
     task:
       prologue:
         commands:
