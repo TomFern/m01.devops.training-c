@@ -13,6 +13,7 @@ blocks:
             - checkout
             - make app
             - artifact push workflow app
+            - cache store myapp app
   - name: Tests
     task:
       prologue:
@@ -22,8 +23,9 @@ blocks:
         - name: Run app
           commands:
             - artifact pull workflow app
+            - cache restore myapp
             - chmod +x app
-            - '# test'
+            - '# test1'
             - ./app
         - name: Lint
           commands:
